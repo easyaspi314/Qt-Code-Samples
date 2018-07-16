@@ -8,7 +8,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     ui->setupUi(this);
 
     // Focus the input on launch
-    QTimer::singleShot(0, ui->input, static_cast<void (QWidget::*)()>(&QWidget::setFocus));
+    QTimer::singleShot(0, ui->input, QOverload<>::of(&QWidget::setFocus));
 
     game *gameLogic = new game(this);
     // Handle connecting the input and console to the game logic class

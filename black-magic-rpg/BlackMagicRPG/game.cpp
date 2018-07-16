@@ -55,7 +55,7 @@ void game::handleMainMenu(const QString &mainMenuInput) {
     QString inputToSend;
     if(mainMenuInput.compare(QLatin1String("1"), Qt::CaseInsensitive) == 0) {
         inputToSend = QStringLiteral("New game selected");
-        state = STATE_NEWGAME;
+        // state = STATE_NEWGAME;
     } else if(mainMenuInput.compare(QLatin1String("clear"), Qt::CaseInsensitive) == 0) {
         inputToSend = QStringLiteral("clear");
     }
