@@ -53,12 +53,12 @@ void game::returnImage(const QPixmap &image) {
 // Function to handle the main menu input
 void game::handleMainMenu(const QString &mainMenuInput) {
     QString inputToSend;
-    if(mainMenuInput == "1") {
-        inputToSend = "New game selected";
-        //state = STATE_NEWGAME;
-    } else if(mainMenuInput == "clear") {
-        inputToSend = "clear";
+    if(mainMenuInput.compare(QLatin1String("1"), Qt::CaseInsensitive) == 0) {
+        inputToSend = QStringLiteral("New game selected");
+        state = STATE_NEWGAME;
+    } else if(mainMenuInput.compare(QLatin1String("clear"), Qt::CaseInsensitive) == 0) {
+        inputToSend = QStringLiteral("clear");
     }
-    if(inputToSend != "")
+    if(!inputToSend.isEmpty())
         returnInput(inputToSend);
 }

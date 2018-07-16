@@ -28,9 +28,9 @@ private slots:
 private:
     int state;
     void handleMainMenu(const QString &);
+    QQueue<QString> userInput;
     gameImages images;
     bool running; // Bool for the game loop to run on
-    QQueue<QString> userInput;
 };
 
 #endif // GAME_H

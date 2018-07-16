@@ -5,8 +5,8 @@
 class gameImages {
 public:
     gameImages();
-    QPixmap getMainMenuLogo() const;
-    QPixmap getNewGameImage() const;
+    const QPixmap &getMainMenuLogo() const;
+    const QPixmap &getNewGameImage() const;
 private:
     QPixmap mainMenuLogo;
     QPixmap newGameImage;

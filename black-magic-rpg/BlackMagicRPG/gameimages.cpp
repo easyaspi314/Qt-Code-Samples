@@ -1,16 +1,14 @@
 #include "gameimages.h"
 
 gameImages::gameImages() {
-    mainMenuLogo.load(":/images/logoConverted.png"); // Main screen logo
-    newGameImage.load(":/images/city.png"); // Set the path for the city image in resources
+    mainMenuLogo.load(QStringLiteral(":/images/logoConverted.png")); // Main screen logo
+    newGameImage.load(QStringLiteral(":/images/city.png")); // Set the path for the city image in resources
 }
 
-QPixmap gameImages::getMainMenuLogo() const
-{
+const QPixmap &gameImages::getMainMenuLogo() const {
     return mainMenuLogo;
 }
 
-QPixmap gameImages::getNewGameImage() const
-{
+const QPixmap &gameImages::getNewGameImage() const {
     return newGameImage;
 }
